@@ -98,7 +98,7 @@ class _BloodDonationLocatorState extends State<BloodDonationLocator> {
           } else if (Provider.of<UserLogin>(context).isLogin == true) {
             return ServiceView();
           } else {
-            return OCR_View();
+            return SplashView();
           }
         },
       ),

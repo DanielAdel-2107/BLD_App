@@ -14,7 +14,7 @@ import 'package:bldapp/generated/l10n.dart';
 class DonationView extends StatefulWidget {
   DonationView({super.key, required this.HemoglobinLevel});
   static String id = '15';
-  double HemoglobinLevel;
+  var HemoglobinLevel;
 
   @override
   State<DonationView> createState() => _DonationViewState();

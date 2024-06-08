@@ -19,7 +19,7 @@ class _OCR_ViewState extends State<OCR_View>
     with SingleTickerProviderStateMixin {
   String? _result;
   final picker = ImagePicker();
-
+  var hemoglobin;
   Future<void> _uploadImage() async {
     if (imageFile == null) {
       setState(() {
@@ -39,6 +39,7 @@ class _OCR_ViewState extends State<OCR_View>
       var jsonResponse = json.decode(response.body);
       setState(() {
         _result = jsonResponse['result'];
+        hemoglobin = jsonResponse['Hemoglobin'];
       });
       if (_result == 'NORMAL') {
         AwesomeDialog(
@@ -46,7 +47,8 @@ class _OCR_ViewState extends State<OCR_View>
           dialogType: DialogType.success,
           animType: AnimType.rightSlide,
           title: S.of(context).Good_analysis,
-          desc: S.of(context).press_Ok_to_complete_your_donation_check,
+          desc: S.of(context).press_Ok_to_complete_your_donation_check +
+              '$hemoglobin',
           btnCancelOnPress: () {
             Navigator.pop(context);
           },
@@ -55,7 +57,7 @@ class _OCR_ViewState extends State<OCR_View>
                 context,
                 MaterialPageRoute(
                   builder: (context) => DonationView(
-                    HemoglobinLevel: jsonResponse['Hemoglobin'].toDouble(),
+                    HemoglobinLevel: hemoglobin,
                   ),
                 ));
             setState(() {});
