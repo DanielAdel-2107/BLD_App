@@ -266,7 +266,7 @@ class _DonationViewState extends State<DonationView> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                S.of(context).Pregnancy,
+                                S.of(context).pregnancy,
                                 style: TextStyle(
                                   color: prov.selectedGender == 2
                                       ? Colors.amber[400]
