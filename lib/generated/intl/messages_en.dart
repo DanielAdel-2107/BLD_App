@@ -176,6 +176,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Please_Enter_your_email_to_rest_password":
             MessageLookupByLibrary.simpleMessage(
                 "Please, Enter your email to rest password"),
+        "Please_check_your_email_or_password":
+            MessageLookupByLibrary.simpleMessage(
+                "Please check your email or password"),
         "Please_enable_location_services_and_app_permissions_to_continue":
             MessageLookupByLibrary.simpleMessage(
                 "Please enable location services and app permissions to continue"),

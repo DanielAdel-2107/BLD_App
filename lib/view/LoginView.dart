@@ -194,7 +194,7 @@ class _LoginViewState extends State<LoginView> {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(bottom: 5),
-                        child: const Text(
+                        child: Text(
                           S.of(context).Welcome_to_BLD,
                           style: TextStyle(
                               fontSize: 30, fontWeight: FontWeight.bold),
@@ -209,7 +209,7 @@ class _LoginViewState extends State<LoginView> {
                       const SizedBox(
                         height: 20,
                       ),
-                      const Align(
+                      Align(
                           alignment: Alignment.topLeft,
                           child: Padding(
                             padding: EdgeInsets.only(left: 10.0, bottom: 8),

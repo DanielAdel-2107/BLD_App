@@ -169,6 +169,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Please_Enter_your_email_to_rest_password":
             MessageLookupByLibrary.simpleMessage(
                 "من فضلك، أدخل بريدك الإلكتروني لإعادة تعيين كلمة المرور"),
+        "Please_check_your_email_or_password":
+            MessageLookupByLibrary.simpleMessage(
+                "برجاء التاكد من الايميل و الباسورد"),
         "Please_enable_location_services_and_app_permissions_to_continue":
             MessageLookupByLibrary.simpleMessage(
                 "يرجى تمكين خدمات الموقع وأذونات التطبيق لمتابعة"),

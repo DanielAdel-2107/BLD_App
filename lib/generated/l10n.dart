@@ -800,6 +800,16 @@ class S {
     );
   }
 
+  /// `Please check your email or password`
+  String get Please_check_your_email_or_password {
+    return Intl.message(
+      'Please check your email or password',
+      name: 'Please_check_your_email_or_password',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Please select your Age`
   String get Please_select_your_Age {
     return Intl.message(

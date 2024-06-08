@@ -74,6 +74,8 @@
     "No":"No",
     "Yes":"Yes",
     "Please_select_your_blood_type":"Please select your blood type",
+    "Please_check_your_email_or_password":"Please check your email or password",
+
     "Please_select_your_Age":"Please select your Age",
     "Please_select_your_BMI":"Please select your BMI",
     "cancel": "Cancel",
