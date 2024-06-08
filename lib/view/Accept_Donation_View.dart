@@ -2,7 +2,7 @@ import 'package:bldapp/view/ServiceView.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
-
+import 'package:bldapp/generated/l10n.dart';
 import '../Colors.dart';
 import 'DonationHospitals.dart';
 
@@ -51,17 +51,19 @@ class _AcceptDonationState extends State<AcceptDonation>
           return AlertDialog(
             backgroundColor: background,
             title: Text(
-              'Location Required',
+              S.of(context).Location_Required,
               style: TextStyle(color: Colors.amber[400]),
             ),
             content: Text(
-              'Please enable location services and app permissions to continue.',
+              S
+                  .of(context)
+                  .Please_enable_location_services_and_app_permissions_to_continue,
               style: TextStyle(color: Colors.white),
             ),
             actions: <Widget>[
               MaterialButton(
                 color: Colors.amber[400],
-                child: Text('Open Location Settings',
+                child: Text(S.of(context).open_location_settings,
                     style: TextStyle(color: background)),
                 onPressed: () {
                   Geolocator
@@ -70,7 +72,7 @@ class _AcceptDonationState extends State<AcceptDonation>
               ),
               MaterialButton(
                 color: Colors.amber[400],
-                child: Text('Open App Settings',
+                child: Text(S.of(context).Open_App_Settings,
                     style: TextStyle(color: background)),
                 onPressed: () {
                   openAppSettings(); // Opens the app settings screen
@@ -78,7 +80,8 @@ class _AcceptDonationState extends State<AcceptDonation>
               ),
               MaterialButton(
                 color: Colors.amber[400],
-                child: Text('Cancel', style: TextStyle(color: background)),
+                child: Text(S.of(context).cancel,
+                    style: TextStyle(color: background)),
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -164,10 +167,9 @@ class _AcceptDonationState extends State<AcceptDonation>
               child: SlideTransition(
                 position: _slideAnimation,
                 child: Text(
-                  'Now , you can donate ',
+                  S.of(context).Now_You_can_donate,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
                   ),
@@ -179,10 +181,12 @@ class _AcceptDonationState extends State<AcceptDonation>
             opacity: _fadeAnimation,
             child: SlideTransition(
               position: _slideAnimation,
-              child: const Padding(
+              child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
                 child: Text(
-                  'You can go to the cloest needed hospital to donate.',
+                  S
+                      .of(context)
+                      .you_can_go_to_the_closest_needed_hospital_to_donate,
                   style: TextStyle(fontSize: 18),
                   textAlign: TextAlign.center,
                 ),
@@ -204,8 +208,8 @@ class _AcceptDonationState extends State<AcceptDonation>
                       side: const BorderSide(color: Color(0xff101530)),
                     ),
                     backgroundColor: Colors.amber),
-                child: const Text(
-                  'Continue',
+                child: Text(
+                  S.of(context).Continue,
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -232,13 +236,12 @@ class _AcceptDonationState extends State<AcceptDonation>
                   fixedSize:
                       Size.fromWidth(MediaQuery.of(context).size.width / 1.5),
                   shape: RoundedRectangleBorder(
-                  
                     borderRadius: BorderRadius.circular(25.0),
                     side: const BorderSide(color: Colors.amber),
                   ),
                 ),
-                child: const Text(
-                  'Back ',
+                child: Text(
+                  S.of(context).back,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

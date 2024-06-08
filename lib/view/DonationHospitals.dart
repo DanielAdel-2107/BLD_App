@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:awesome_icons/awesome_icons.dart';
-import 'package:bldapp/Colors.dart';
+import 'package:bldapp/generated/l10n.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -197,7 +197,7 @@ class _DonationHospitalResualtState extends State<DonationHospitalResualt> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Text(
-                                                  'Blood Type: $bloodType, available: $bloodTypeCount',
+                                                  '${S.of(context).Blood_Type} : $bloodType, ${S.of(context).available}: $bloodTypeCount',
                                                   style: const TextStyle(),
                                                 ),
                                                 Text(
@@ -215,7 +215,7 @@ class _DonationHospitalResualtState extends State<DonationHospitalResualt> {
                                                                     .longitude) /
                                                             1000)
                                                         .toStringAsFixed(2),
-                                                  )} Km ',
+                                                  )} ${S.of(context).Km} ',
                                                   style: const TextStyle(
                                                       // color: Colors.white
                                                       //

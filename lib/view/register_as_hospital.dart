@@ -12,6 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../Provider/theme_provider.dart';
 import 'updatessss/hospital.dart';
+import 'package:bldapp/generated/l10n.dart';
 
 // ignore: must_be_immutable
 class RegisterAsHospitalView extends StatefulWidget {
@@ -37,7 +38,7 @@ class _RegisterAsHospitalViewState extends State<RegisterAsHospitalView> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'Hospital Register',
+            S.of(context).Hospital_register,
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
         ),
@@ -67,7 +68,7 @@ class _RegisterAsHospitalViewState extends State<RegisterAsHospitalView> {
                           controller: idController,
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
-                            hintText: 'Enter secret key',
+                            hintText: S.of(context).enter_secret_key,
                           ),
                         ),
                       ),
@@ -95,8 +96,8 @@ class _RegisterAsHospitalViewState extends State<RegisterAsHospitalView> {
                               context: context,
                               dialogType: DialogType.error,
                               animType: AnimType.scale,
-                              title: 'Error',
-                              desc: 'Invalid secret number',
+                              title: S.of(context).Error,
+                              desc: S.of(context).Invalid_secret_number,
                               btnCancelOnPress: () {},
                               btnOkOnPress: () async {},
                             )..show();
@@ -131,7 +132,7 @@ class _RegisterAsHospitalViewState extends State<RegisterAsHospitalView> {
                                 ),
                               )
                             : Text(
-                                'Register',
+                                S.of(context).Register,
                                 style: TextStyle(fontSize: 20),
                               ),
                       ),
@@ -139,7 +140,7 @@ class _RegisterAsHospitalViewState extends State<RegisterAsHospitalView> {
                         height: 20,
                       ),
                       Text(
-                        'Or Contact us ',
+                        S.of(context).Or_Contact_us,
                         style: TextStyle(fontSize: 18),
                       ),
                       SizedBox(

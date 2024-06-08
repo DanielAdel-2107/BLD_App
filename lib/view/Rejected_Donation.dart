@@ -3,6 +3,7 @@ import 'package:bldapp/view/ServiceView.dart';
 import 'package:bldapp/view/chat_bot.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:bldapp/generated/l10n.dart';
 
 class RejectedDonation extends StatefulWidget {
   const RejectedDonation({
@@ -73,7 +74,7 @@ class _RejectedDonationState extends State<RejectedDonation>
               child: SlideTransition(
                 position: _slideAnimation,
                 child: Text(
-                  'Sorry , you can\'t donate ',
+                  S.of(context).sorry_you_cant_donate,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 24.0,
@@ -87,10 +88,12 @@ class _RejectedDonationState extends State<RejectedDonation>
             opacity: _fadeAnimation,
             child: SlideTransition(
               position: _slideAnimation,
-              child: const Padding(
+              child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
                 child: Text(
-                  'According to the personal examination analysis, you can\'t donate blood',
+                  S
+                      .of(context)
+                      .According_to_the_personal_examination_analysis_you_cant_donate_blood,
                   style: TextStyle(
                     fontSize: 18,
                   ),
@@ -119,8 +122,8 @@ class _RejectedDonationState extends State<RejectedDonation>
                     side: const BorderSide(color: Colors.amber),
                   ),
                 ),
-                child: const Text(
-                  'Continue ',
+                child: Text(
+                  S.of(context).Continue,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -149,8 +152,8 @@ class _RejectedDonationState extends State<RejectedDonation>
                     side: const BorderSide(color: Colors.amber),
                   ),
                 ),
-                child: const Text(
-                  'Back ',
+                child: Text(
+                  S.of(context).back,
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,

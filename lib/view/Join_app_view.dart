@@ -89,21 +89,19 @@ class _JoinBloodDonationAppState extends State<JoinBloodDonationApp> {
                 children: [
                   !provider.isArabic
                       ? Text(
-                          'Change to Arabic',
+                          S.of(context).change_languge,
                           style: TextStyle(fontSize: 16),
                         )
                       : SizedBox(),
                   IconButton(
-                      onPressed: () {
-                       
-                      },
+                      onPressed: () {},
                       icon: Icon(
                         Icons.language,
                         size: 25,
                       )),
                   provider.isArabic
                       ? Text(
-                          "اللغه الانجليزيه",
+                          S.of(context).change_languge,
                           style: TextStyle(fontSize: 16),
                         )
                       : SizedBox(),

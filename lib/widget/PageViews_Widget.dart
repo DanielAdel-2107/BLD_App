@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:bldapp/generated/l10n.dart';
 
 import '../Colors.dart';
 import 'Custom_Clipper.dart';
@@ -75,7 +76,7 @@ class CustomPageView extends StatelessWidget {
                                     backgroundColor: background),
                                 onPressed: onTap,
                                 child: Text(
-                                  'Back',
+                                  S.of(context).back,
                                   style: TextStyle(color: Colors.white),
                                 ))
                             : SizedBox(),

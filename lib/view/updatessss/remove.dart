@@ -327,8 +327,8 @@ class _RemoveState extends State<Remove> {
               context: context,
               dialogType: DialogType.warning,
               animType: AnimType.rightSlide,
-              title: 'Warning',
-              desc: 'Blood type is Expired',
+              title: S.of(context).Warning,
+              desc: S.of(context).Blood_Type_Expiry_Date,
               btnCancelOnPress: () {},
               btnOkOnPress: () async {
                 setState(() {});
@@ -339,8 +339,8 @@ class _RemoveState extends State<Remove> {
               context: context,
               dialogType: DialogType.info,
               animType: AnimType.rightSlide,
-              title: 'successful',
-              desc: 'Blood type is deleted',
+              title: S.of(context).successfull,
+              desc: S.of(context).Blood_type_is_deleted,
               btnCancelOnPress: () {},
               btnOkOnPress: () async {
                 setState(() {});
@@ -352,8 +352,8 @@ class _RemoveState extends State<Remove> {
             context: context,
             dialogType: DialogType.info,
             animType: AnimType.rightSlide,
-            title: 'Failure',
-            desc: 'Blood type isn\'t exist',
+            title: S.of(context).Failure,
+            desc: S.of(context).Blood_type_isnt_exist,
             btnCancelOnPress: () {},
             btnOkOnPress: () async {
               setState(() {});
@@ -366,8 +366,8 @@ class _RemoveState extends State<Remove> {
         context: context,
         dialogType: DialogType.info,
         animType: AnimType.rightSlide,
-        title: 'Error',
-        desc: 'please scan a correct Qr',
+        title: S.of(context).Error,
+        desc: S.of(context).please_scan_a_correct_Qr,
         btnCancelOnPress: () {},
         btnOkOnPress: () {},
       )..show();

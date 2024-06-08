@@ -256,7 +256,7 @@ class _ServiceViewState extends State<ServiceView> {
                     onpressed: () async {
                       key.currentState!.closeDrawer();
                     },
-                    text: 'Close',
+                    text: S.of(context).cancel,
                     icon: Icons.close,
                   ),
                 ],

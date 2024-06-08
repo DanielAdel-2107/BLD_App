@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:translator/translator.dart';
+import 'package:bldapp/generated/l10n.dart';
 
 class ChatScreen extends StatefulWidget {
   @override
@@ -21,15 +22,12 @@ class _ChatScreenState extends State<ChatScreen> {
     final headers = {"Content-Type": "application/json"};
     String translatedText = userInput;
     bool isArabic = false;
-
     if (_isArabic(userInput)) {
       isArabic = true;
       translatedText =
           (await translator.translate(userInput, from: 'ar', to: 'en')).text;
     }
-
     final body = json.encode({"user_input": translatedText});
-
     try {
       setState(() {
         _messages.add({
@@ -38,9 +36,7 @@ class _ChatScreenState extends State<ChatScreen> {
         });
         _isTyping = true;
       });
-
       final response = await http.post(url, headers: headers, body: body);
-
       if (response.statusCode == 200) {
         var responseText = response.body;
         if (isArabic) {
@@ -100,7 +96,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Chatbot'),
+        title: Text(S.of(context).ChatBot),
       ),
       body: Column(
         children: [
@@ -152,7 +148,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   child: TextField(
                     controller: _controller,
                     decoration: InputDecoration(
-                      hintText: 'Enter your message',
+                      hintText: S.of(context).Enter_your_Meaasge,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0),
                       ),

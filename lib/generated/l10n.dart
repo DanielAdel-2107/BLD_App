@@ -190,6 +190,16 @@ class S {
     );
   }
 
+  /// `password is too weak`
+  String get password_is_too_weak {
+    return Intl.message(
+      'password is too weak',
+      name: 'password_is_too_weak',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Loading`
   String get Loading {
     return Intl.message(
@@ -250,11 +260,51 @@ class S {
     );
   }
 
+  /// `Location Service Disabled`
+  String get Location_Service_Disabled {
+    return Intl.message(
+      'Location Service Disabled',
+      name: 'Location_Service_Disabled',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enable the location service to perform the search.`
+  String get Please_enable_the_location_service_to_perform_the_search {
+    return Intl.message(
+      'Please enable the location service to perform the search.',
+      name: 'Please_enable_the_location_service_to_perform_the_search',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Enter your email`
   String get Enter_your_email {
     return Intl.message(
       'Enter your email',
       name: 'Enter_your_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Invalid Blood Type`
+  String get Invalid_Blood_Type {
+    return Intl.message(
+      'Invalid Blood Type',
+      name: 'Invalid_Blood_Type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The_blood_type_you_entered_is_not_valid`
+  String get The_blood_type_you_entered_is_not_valid {
+    return Intl.message(
+      'The_blood_type_you_entered_is_not_valid',
+      name: 'The_blood_type_you_entered_is_not_valid',
       desc: '',
       args: [],
     );
@@ -710,6 +760,66 @@ class S {
     );
   }
 
+  /// `Sorry , this email not found try again`
+  String get Sorry_this_email_not_found_try_again {
+    return Intl.message(
+      'Sorry , this email not found try again',
+      name: 'Sorry_this_email_not_found_try_again',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No`
+  String get No {
+    return Intl.message(
+      'No',
+      name: 'No',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get Yes {
+    return Intl.message(
+      'Yes',
+      name: 'Yes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select your blood type`
+  String get Please_select_your_blood_type {
+    return Intl.message(
+      'Please select your blood type',
+      name: 'Please_select_your_blood_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select your Age`
+  String get Please_select_your_Age {
+    return Intl.message(
+      'Please select your Age',
+      name: 'Please_select_your_Age',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select your BMI`
+  String get Please_select_your_BMI {
+    return Intl.message(
+      'Please select your BMI',
+      name: 'Please_select_your_BMI',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Cancel`
   String get cancel {
     return Intl.message(
@@ -725,6 +835,56 @@ class S {
     return Intl.message(
       'Continue',
       name: 'Continue',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login Successful`
+  String get Login_Successful {
+    return Intl.message(
+      'Login Successful',
+      name: 'Login_Successful',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login Failed: Email not verified`
+  String get Login_Failed_Email_not_verified {
+    return Intl.message(
+      'Login Failed: Email not verified',
+      name: 'Login_Failed_Email_not_verified',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please, Enter correct email`
+  String get Please_Enter_correct_email {
+    return Intl.message(
+      'Please, Enter correct email',
+      name: 'Please_Enter_correct_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please, Enter correct password`
+  String get Please_Enter_correct_password {
+    return Intl.message(
+      'Please, Enter correct password',
+      name: 'Please_Enter_correct_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This email is not vaild`
+  String get This_email_is_not_vaild {
+    return Intl.message(
+      'This email is not vaild',
+      name: 'This_email_is_not_vaild',
       desc: '',
       args: [],
     );

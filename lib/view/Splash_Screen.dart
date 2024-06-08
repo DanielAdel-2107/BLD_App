@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import '../Colors.dart';
 import '../widget/Custom_Clipper.dart';
 import 'PagesView.dart';
+import 'package:bldapp/generated/l10n.dart';
 
 class SplashView extends StatefulWidget {
   static String id = '1';
   @override
   State<SplashView> createState() => _SplashViewState();
 }
+
 class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
@@ -17,6 +19,7 @@ class _SplashViewState extends State<SplashView> {
     });
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,11 +33,11 @@ class _SplashViewState extends State<SplashView> {
             clipper: MyCustomClipper(),
             child: Container(
               width: double.infinity,
-              child: const Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Welcome',
+                    S.of(context).Welcome_to_BLD,
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 30,

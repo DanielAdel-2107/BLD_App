@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:provider/provider.dart';
+import 'package:bldapp/generated/l10n.dart';
 
 import '../Colors.dart';
 import '../Widget/CustomButton.dart';
@@ -63,7 +64,7 @@ class _LoginViewState extends State<LoginView> {
                 right: 10,
               ),
               content: Text(
-                'Login Successful',
+                S.of(context).Login_Successful,
                 style: TextStyle(color: background),
               ),
             ),
@@ -82,7 +83,7 @@ class _LoginViewState extends State<LoginView> {
                 right: 10,
               ),
               content: Text(
-                'Login Failed: Email not verified',
+                S.of(context).Login_Failed_Email_not_verified,
                 style:
                     TextStyle(color: background, fontWeight: FontWeight.bold),
               ),
@@ -102,7 +103,7 @@ class _LoginViewState extends State<LoginView> {
               bottom: MediaQuery.of(context).size.height - 80,
               left: 10,
               right: 10),
-          content: Text('Please, Enter correct email',
+          content: Text(S.of(context).Please_Enter_correct_email,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: background,
@@ -119,7 +120,7 @@ class _LoginViewState extends State<LoginView> {
               bottom: MediaQuery.of(context).size.height - 80,
               left: 10,
               right: 10),
-          content: Text('Please, Enter correct password',
+          content: Text(S.of(context).Please_Enter_correct_password,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: background,
@@ -136,7 +137,7 @@ class _LoginViewState extends State<LoginView> {
               bottom: MediaQuery.of(context).size.height - 80,
               left: 10,
               right: 10),
-          content: Text('This email is not vaild',
+          content: Text(S.of(context).This_email_is_not_vaild,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: background,
@@ -153,7 +154,7 @@ class _LoginViewState extends State<LoginView> {
               bottom: MediaQuery.of(context).size.height - 80,
               left: 10,
               right: 10),
-          content: Text('Please check your email or password',
+          content: Text(S.of(context).Please_check_your_email_or_password,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: background,
@@ -194,13 +195,13 @@ class _LoginViewState extends State<LoginView> {
                       Padding(
                         padding: const EdgeInsets.only(bottom: 5),
                         child: const Text(
-                          'Welcome To BLD',
+                          S.of(context).Welcome_to_BLD,
                           style: TextStyle(
                               fontSize: 30, fontWeight: FontWeight.bold),
                         ),
                       ),
-                      const Text(
-                        'Login to discover more services ',
+                      Text(
+                        S.of(context).Login_to_dicover_more_services,
                         style: TextStyle(
                           fontSize: 16,
                         ),
@@ -213,7 +214,7 @@ class _LoginViewState extends State<LoginView> {
                           child: Padding(
                             padding: EdgeInsets.only(left: 10.0, bottom: 8),
                             child: Text(
-                              'Email Adress',
+                              S.of(context).Email_address,
                             ),
                           )),
                       CustomTextFormField(
@@ -228,18 +229,18 @@ class _LoginViewState extends State<LoginView> {
                         onChanged: (value) {
                           email = value;
                         },
-                        text: 'Enter your email',
+                        text: S.of(context).Enter_your_email,
                         suffixIcon: Icons.email,
                       ),
                       const SizedBox(
                         height: 15,
                       ),
-                      const Align(
+                      Align(
                           alignment: Alignment.bottomLeft,
                           child: Padding(
                             padding: EdgeInsets.only(left: 10.0, bottom: 8),
                             child: Text(
-                              'Password',
+                              S.of(context).password,
                               style: TextStyle(
                                 fontSize: 20,
                               ),
@@ -256,7 +257,7 @@ class _LoginViewState extends State<LoginView> {
                         onChanged: (value) {
                           password = value;
                         },
-                        text: 'Enter you password',
+                        text: S.of(context).Enter_you_password,
                         isVisable: Visabilty,
                         suffixIcon: Visabilty ? Icons.visibility_off : Icon,
                         onPressed: () {
@@ -280,7 +281,7 @@ class _LoginViewState extends State<LoginView> {
                                       child: AlertDialog(
                                           backgroundColor: background,
                                           title: Text(
-                                            'Reset password',
+                                            S.of(context).Rest_password,
                                             style: TextStyle(
                                                 fontSize: 25,
                                                 color: Colors.amber,
@@ -292,7 +293,9 @@ class _LoginViewState extends State<LoginView> {
                                               mainAxisSize: MainAxisSize.min,
                                               children: [
                                                 Text(
-                                                  'Please, Enter your email to reset password',
+                                                  S
+                                                      .of(context)
+                                                      .Please_Enter_your_email_to_rest_password,
                                                   style: TextStyle(
                                                     fontSize: 20,
                                                     color: Colors.white,
@@ -305,7 +308,9 @@ class _LoginViewState extends State<LoginView> {
                                                   onChanged: (value) {
                                                     resetEmail = value;
                                                   },
-                                                  text: 'Enter your email',
+                                                  text: S
+                                                      .of(context)
+                                                      .Enter_your_email,
                                                   validator: (value) {
                                                     if (value!.isEmpty) {
                                                       return 'Please type your email';
@@ -360,7 +365,9 @@ class _LoginViewState extends State<LoginView> {
                                                               left: 10,
                                                               right: 10),
                                                           content: Text(
-                                                              'Please check you email to reset password',
+                                                              S
+                                                                  .of(context)
+                                                                  .Please_check_your_email_or_password,
                                                               style: TextStyle(
                                                                 fontWeight:
                                                                     FontWeight
@@ -392,7 +399,9 @@ class _LoginViewState extends State<LoginView> {
                                                             left: 10,
                                                             right: 10),
                                                         content: Text(
-                                                            'Sorry , this email not found try again',
+                                                            S
+                                                                .of(context)
+                                                                .Sorry_this_email_not_found_try_again,
                                                             style: TextStyle(
                                                                 fontWeight:
                                                                     FontWeight
@@ -409,7 +418,7 @@ class _LoginViewState extends State<LoginView> {
                                                     });
                                                   },
                                                   child: Text(
-                                                    'Send',
+                                                    S.of(context).send,
                                                     style: TextStyle(
                                                         color: background),
                                                   ),
@@ -420,7 +429,7 @@ class _LoginViewState extends State<LoginView> {
                                           )));
                                 });
                           },
-                          child: Text('Forget Password ?',
+                          child: Text(S.of(context).Forget_Password,
                               style: TextStyle(
                                 fontSize: 18,
                               )),
@@ -430,7 +439,7 @@ class _LoginViewState extends State<LoginView> {
                         height: 20,
                       ),
                       CustomButton(
-                          text: 'Sign in',
+                          text: S.of(context).Sign_in,
                           onTap: () async {
                             setState(() {
                               isLoadibg = true;
@@ -459,8 +468,8 @@ class _LoginViewState extends State<LoginView> {
                                   borderRadius: BorderRadius.circular(10)),
                             ),
                           ),
-                          const Text(
-                            ' Or Login with ',
+                          Text(
+                            S.of(context).Or_Login_With,
                             style: TextStyle(fontSize: 17),
                           ),
                           Expanded(
@@ -482,8 +491,8 @@ class _LoginViewState extends State<LoginView> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text(
-                            'You don\'t have an account?',
+                          Text(
+                            S.of(context).You_dont_have_an_account,
                             style: TextStyle(fontSize: 17),
                           ),
                           TextButton(
@@ -492,7 +501,7 @@ class _LoginViewState extends State<LoginView> {
                                     context, RegisterView.id);
                               },
                               child: Text(
-                                'Register',
+                                S.of(context).Register,
                                 style: TextStyle(
                                     fontSize: 18, color: Colors.amber),
                               ))

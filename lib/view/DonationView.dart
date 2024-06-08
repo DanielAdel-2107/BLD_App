@@ -266,7 +266,7 @@ class _DonationViewState extends State<DonationView> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Pregnancy :',
+                                S.of(context).Pregnancy,
                                 style: TextStyle(
                                   color: prov.selectedGender == 2
                                       ? Colors.amber[400]
@@ -285,7 +285,7 @@ class _DonationViewState extends State<DonationView> {
                                   CustomRadioButton(
                                     index: 1,
                                     selected: prov.selectedPregnancy,
-                                    text: 'No',
+                                    text: S.of(context).No,
                                     fun: prov.selectedGender == 2
                                         ? () {
                                             prov.getPregnancy(selectIndex: 1);
@@ -297,7 +297,7 @@ class _DonationViewState extends State<DonationView> {
                                   CustomRadioButton(
                                     index: 2,
                                     selected: prov.selectedPregnancy,
-                                    text: 'Yes',
+                                    text: S.of(context).Yes,
                                     fun: prov.selectedGender == 2
                                         ? () {
                                             prov.getPregnancy(selectIndex: 2);
@@ -312,7 +312,7 @@ class _DonationViewState extends State<DonationView> {
                             ],
                           ),
                           Text(
-                            'Smoking : ',
+                            S.of(context).smoking,
                             style: TextStyle(
                               // color: Colors.amber[400],
                               fontSize: 24,
@@ -328,14 +328,14 @@ class _DonationViewState extends State<DonationView> {
                               CustomRadioButton(
                                   index: 1,
                                   selected: prov.selectedSmoking,
-                                  text: "No",
+                                  text: S.of(context).No,
                                   fun: () {
                                     prov.getSmoking(selectIndex: 1);
                                   }),
                               CustomRadioButton(
                                   index: 2,
                                   selected: prov.selectedSmoking,
-                                  text: "Yes",
+                                  text: S.of(context).Yes,
                                   fun: () {
                                     prov.getSmoking(selectIndex: 2);
                                   }),
@@ -359,7 +359,7 @@ class _DonationViewState extends State<DonationView> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Blood Pressure :',
+                              S.of(context).Blood_Pressure,
                               style: TextStyle(
                                 // color: Colors.amber[400],
                                 fontSize: 20,
@@ -375,14 +375,14 @@ class _DonationViewState extends State<DonationView> {
                                 CustomRadioButton(
                                     index: 1,
                                     selected: prov.selectPressure,
-                                    text: "No",
+                                    text: S.of(context).No,
                                     fun: () {
                                       prov.getPressure(selectIndex: 1);
                                     }),
                                 CustomRadioButton(
                                     index: 2,
                                     selected: prov.selectPressure,
-                                    text: "Yes",
+                                    text: S.of(context).Yes,
                                     fun: () {
                                       prov.getPressure(selectIndex: 2);
                                     }),
@@ -390,7 +390,7 @@ class _DonationViewState extends State<DonationView> {
                             ),
                             CustomDivider(),
                             Text(
-                              'Level of Hemoglobin :',
+                              S.of(context).Level_of_hemoglobin,
                               style: TextStyle(
                                 // color: Colors.amber[400],
                                 fontSize: 20,
@@ -439,7 +439,7 @@ class _DonationViewState extends State<DonationView> {
                             ),
                             CustomDivider(),
                             Text(
-                              'Age :',
+                              S.of(context).Age,
                               style: TextStyle(
                                 // color: Colors.amber[400],
                                 fontSize: 20,
@@ -464,7 +464,7 @@ class _DonationViewState extends State<DonationView> {
                               },
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'Please select your Age';
+                                  return S.of(context).Please_select_your_Age;
                                 }
                               },
                               keyboardType: TextInputType.number,
@@ -476,7 +476,7 @@ class _DonationViewState extends State<DonationView> {
                                           : background,
                                     ),
                                     borderRadius: BorderRadius.circular(20)),
-                                hintText: 'Enter your age',
+                                hintText: S.of(context).Enter_Your_Age,
                                 hintStyle:
                                     TextStyle(color: Colors.grey, fontSize: 18),
                                 border: OutlineInputBorder(
@@ -498,7 +498,7 @@ class _DonationViewState extends State<DonationView> {
                             ),
                             CustomDivider(),
                             Text(
-                              'BMI :',
+                              S.of(context).BMI,
                               style: TextStyle(
                                 //  color: Colors.amber[400],
                                 fontSize: 20,
@@ -523,7 +523,7 @@ class _DonationViewState extends State<DonationView> {
                               },
                               validator: (value) {
                                 if (value == null || value.isEmpty) {
-                                  return 'Please select your BMI';
+                                  return S.of(context).Please_select_your_BMI;
                                 }
                               },
                               keyboardType: TextInputType.number,
@@ -535,7 +535,7 @@ class _DonationViewState extends State<DonationView> {
                                           : background,
                                     ),
                                     borderRadius: BorderRadius.circular(20)),
-                                hintText: 'Enter your weight',
+                                hintText: S.of(context).Enter_your_Weight,
                                 hintStyle:
                                     TextStyle(color: Colors.grey, fontSize: 18),
                                 border: OutlineInputBorder(
@@ -574,7 +574,7 @@ class _DonationViewState extends State<DonationView> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Chronic Kidney Disease :',
+                              S.of(context).Chronic_Kidney_Diseases,
                               style: TextStyle(
                                 // color: Colors.amber[400],
                                 fontSize: 20,
@@ -590,14 +590,14 @@ class _DonationViewState extends State<DonationView> {
                                 CustomRadioButton(
                                     index: 1,
                                     selected: prov.selectedChronicKidneyDisease,
-                                    text: 'No',
+                                    text: S.of(context).No,
                                     fun: () {
                                       prov.getKidneyDisease(selectIndex: 1);
                                     }),
                                 CustomRadioButton(
                                     index: 2,
                                     selected: prov.selectedChronicKidneyDisease,
-                                    text: 'Yes',
+                                    text: S.of(context).Yes,
                                     fun: () {
                                       prov.getKidneyDisease(selectIndex: 2);
                                     })
@@ -605,7 +605,7 @@ class _DonationViewState extends State<DonationView> {
                             ),
                             CustomDivider(),
                             Text(
-                              'Adrenal And Thyroid Disorders :',
+                              S.of(context).Adrenal_And_Thyroid_Disorders,
                               style: TextStyle(
                                 // color: Colors.amber[400],
                                 fontSize: 20,
@@ -622,7 +622,7 @@ class _DonationViewState extends State<DonationView> {
                                     index: 1,
                                     selected:
                                         prov.selectedAdrenalAndThyroidDisorders,
-                                    text: 'No',
+                                    text: S.of(context).No,
                                     fun: () {
                                       prov.getThyroidDisorders(selectIndex: 1);
                                     }),
@@ -630,7 +630,7 @@ class _DonationViewState extends State<DonationView> {
                                     index: 2,
                                     selected:
                                         prov.selectedAdrenalAndThyroidDisorders,
-                                    text: 'Yes',
+                                    text: S.of(context).Yes,
                                     fun: () {
                                       prov.getThyroidDisorders(selectIndex: 2);
                                     }),
@@ -638,7 +638,7 @@ class _DonationViewState extends State<DonationView> {
                             ),
                             CustomDivider(),
                             Text(
-                              'Have you donated previously ? ',
+                              S.of(context).Have_you_donated_previously,
                               style: TextStyle(
                                 // color: Colors.amber[400],
                                 fontSize: 20,
@@ -654,14 +654,14 @@ class _DonationViewState extends State<DonationView> {
                                 CustomRadioButton(
                                     index: 1,
                                     selected: prov.selectedDonated,
-                                    text: 'No',
+                                    text: S.of(context).No,
                                     fun: () {
                                       prov.getDonate(selectIndex: 1);
                                     }),
                                 CustomRadioButton(
                                     index: 2,
                                     selected: prov.selectedDonated,
-                                    text: 'Yes',
+                                    text: S.of(context).Yes,
                                     fun: () {
                                       prov.getDonate(selectIndex: 2);
                                     })
@@ -672,7 +672,9 @@ class _DonationViewState extends State<DonationView> {
                                 readOnly: true,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return 'Please select your blood type';
+                                    return S
+                                        .of(context)
+                                        .Please_select_your_blood_type;
                                   }
                                   return null;
                                 },
@@ -695,7 +697,8 @@ class _DonationViewState extends State<DonationView> {
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
                                   errorStyle: TextStyle(color: Colors.white),
-                                  hintText: 'Select your blood type',
+                                  hintText:
+                                      S.of(context).Select_Your_blood_type,
                                   hintStyle: TextStyle(
                                     color: _theme.isDarkMode
                                         ? Colors.white

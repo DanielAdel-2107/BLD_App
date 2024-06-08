@@ -127,6 +127,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Hospital_register":
             MessageLookupByLibrary.simpleMessage("Hospital Register"),
         "Info": MessageLookupByLibrary.simpleMessage("Notifications"),
+        "Invalid_Blood_Type":
+            MessageLookupByLibrary.simpleMessage("Invalid Blood Type"),
         "Invalid_secret_number":
             MessageLookupByLibrary.simpleMessage("Invalid secret number"),
         "Km": MessageLookupByLibrary.simpleMessage("Km"),
@@ -136,8 +138,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "Loading": MessageLookupByLibrary.simpleMessage("Loading"),
         "Location_Required":
             MessageLookupByLibrary.simpleMessage("Location Required"),
+        "Location_Service_Disabled":
+            MessageLookupByLibrary.simpleMessage("Location Service Disabled"),
         "Location_is_required_to_use_app": MessageLookupByLibrary.simpleMessage(
             "Location is required to use app!"),
+        "Login_Failed_Email_not_verified": MessageLookupByLibrary.simpleMessage(
+            "Login Failed: Email not verified"),
+        "Login_Successful":
+            MessageLookupByLibrary.simpleMessage("Login Successful"),
         "Login_to_dicover_more_services": MessageLookupByLibrary.simpleMessage(
             "Login to dicover more services"),
         "Login_to_discover_more_services": MessageLookupByLibrary.simpleMessage(
@@ -148,6 +156,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Name": MessageLookupByLibrary.simpleMessage("Name"),
         "National_ID": MessageLookupByLibrary.simpleMessage("National ID"),
         "Next": MessageLookupByLibrary.simpleMessage("Next"),
+        "No": MessageLookupByLibrary.simpleMessage("No"),
         "No_image_selected":
             MessageLookupByLibrary.simpleMessage("No image selected."),
         "Notification": MessageLookupByLibrary.simpleMessage("Notification"),
@@ -160,12 +169,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "Or_Login_With": MessageLookupByLibrary.simpleMessage("Or Login With"),
         "Phone_Number": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "Place": MessageLookupByLibrary.simpleMessage("Place"),
+        "Please_Enter_correct_email":
+            MessageLookupByLibrary.simpleMessage("Please, Enter correct email"),
+        "Please_Enter_correct_password": MessageLookupByLibrary.simpleMessage(
+            "Please, Enter correct password"),
         "Please_Enter_your_email_to_rest_password":
             MessageLookupByLibrary.simpleMessage(
                 "Please, Enter your email to rest password"),
         "Please_enable_location_services_and_app_permissions_to_continue":
             MessageLookupByLibrary.simpleMessage(
                 "Please enable location services and app permissions to continue"),
+        "Please_enable_the_location_service_to_perform_the_search":
+            MessageLookupByLibrary.simpleMessage(
+                "Please enable the location service to perform the search."),
+        "Please_select_your_Age":
+            MessageLookupByLibrary.simpleMessage("Please select your Age"),
+        "Please_select_your_BMI":
+            MessageLookupByLibrary.simpleMessage("Please select your BMI"),
+        "Please_select_your_blood_type": MessageLookupByLibrary.simpleMessage(
+            "Please select your blood type"),
         "Please_verify_your_email_to_continue_registration":
             MessageLookupByLibrary.simpleMessage(
                 "Please verify your email to continue registration"),
@@ -190,18 +212,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "Something_went_wrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "Sorry": MessageLookupByLibrary.simpleMessage("Sorry"),
+        "Sorry_this_email_not_found_try_again":
+            MessageLookupByLibrary.simpleMessage(
+                "Sorry , this email not found try again"),
+        "The_blood_type_you_entered_is_not_valid":
+            MessageLookupByLibrary.simpleMessage(
+                "The_blood_type_you_entered_is_not_valid"),
         "The_data_will_be_completely_erased_from_the_application":
             MessageLookupByLibrary.simpleMessage(
                 "The data will be completely erased from the application"),
         "The_notifications_will_be_completely_deleted":
             MessageLookupByLibrary.simpleMessage(
                 "The notifications will be completely deleted"),
+        "This_email_is_not_vaild":
+            MessageLookupByLibrary.simpleMessage("This email is not vaild"),
         "User_Name": MessageLookupByLibrary.simpleMessage("User Name"),
         "Verify_your_email":
             MessageLookupByLibrary.simpleMessage("Verify your email"),
         "Warning": MessageLookupByLibrary.simpleMessage("Warning"),
         "Welcome_to_BLD":
             MessageLookupByLibrary.simpleMessage("Welcome to BLD"),
+        "Yes": MessageLookupByLibrary.simpleMessage("Yes"),
         "You_dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("You dont have an account?"),
         "add_more_data": MessageLookupByLibrary.simpleMessage("Add more data"),
@@ -228,6 +259,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "open_location_settings":
             MessageLookupByLibrary.simpleMessage("Open Location Settings"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password_is_too_weak":
+            MessageLookupByLibrary.simpleMessage("password is too weak"),
         "permission": MessageLookupByLibrary.simpleMessage("Permission"),
         "please_scan_a_correct_Qr":
             MessageLookupByLibrary.simpleMessage("please_scan_a_correct_Qr"),

@@ -2,11 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:bldapp/view/DonationView.dart';
 import 'package:bldapp/view/chat_bot.dart';
-import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
+import 'package:bldapp/generated/l10n.dart';
 
 class OCR_View extends StatefulWidget {
   const OCR_View({super.key});
@@ -45,8 +45,8 @@ class _OCR_ViewState extends State<OCR_View>
           context: context,
           dialogType: DialogType.success,
           animType: AnimType.rightSlide,
-          title: 'Good analysis',
-          desc: 'press Ok to complete your donation check ',
+          title: S.of(context).Good_analysis,
+          desc: S.of(context).press_Ok_to_complete_your_donation_check,
           btnCancelOnPress: () {
             Navigator.pop(context);
           },
@@ -55,10 +55,9 @@ class _OCR_ViewState extends State<OCR_View>
                 context,
                 MaterialPageRoute(
                   builder: (context) => DonationView(
-                    HemoglobinLevel: jsonResponse['HEMOGLOBIN'].toDouble(),
+                    HemoglobinLevel: jsonResponse['Hemoglobin'].toDouble(),
                   ),
                 ));
-
             setState(() {});
           },
         ).show();
@@ -67,8 +66,9 @@ class _OCR_ViewState extends State<OCR_View>
           context: context,
           dialogType: DialogType.warning,
           animType: AnimType.rightSlide,
-          title: 'Sorry',
-          desc: ' you can\'t donate press continue to check the reasons',
+          title: S.of(context).Sorry,
+          desc:
+              S.of(context).you_cant_donate_press_continue_to_check_the_reasons,
           btnCancelOnPress: () {
             Navigator.pop(context);
           },
@@ -112,7 +112,7 @@ class _OCR_ViewState extends State<OCR_View>
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('CBC Test Donation'),
+        title: Text(S.of(context).CBC_Test_Donation),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -122,7 +122,7 @@ class _OCR_ViewState extends State<OCR_View>
             // ignore: sort_child_properties_last
             child: Center(
               child: imageFile == null
-                  ? const Text('No image selected.')
+                  ? Text(S.of(context).No_image_selected)
                   : Image.file(
                       File(imageFile!.path),
                       fit: BoxFit.fill,
@@ -160,7 +160,7 @@ class _OCR_ViewState extends State<OCR_View>
                             size: 30,
                           ),
                           Text(
-                            "Gallery",
+                            S.of(context).Gallery,
                             style: TextStyle(
                                 fontSize: 13, color: Colors.grey[600]),
                           )
@@ -192,7 +192,7 @@ class _OCR_ViewState extends State<OCR_View>
                             size: 30,
                           ),
                           Text(
-                            "Camera",
+                            S.of(context).Camera,
                             style: TextStyle(
                                 fontSize: 13, color: Colors.grey[600]),
                           )

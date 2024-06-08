@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Blood_Type_Date":
             MessageLookupByLibrary.simpleMessage("تاريخ الاضافه"),
         "Blood_Type_Expiry_Date":
-            MessageLookupByLibrary.simpleMessage("Blood Type Expiry Date"),
+            MessageLookupByLibrary.simpleMessage("فصيلة الدم منتهيت الصلاحيه"),
         "Blood_type": MessageLookupByLibrary.simpleMessage("نوع الدم"),
         "Blood_type_already_exists":
             MessageLookupByLibrary.simpleMessage("فصيلة الدم موجوده بالفعل"),
@@ -120,6 +120,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "Hospital_register":
             MessageLookupByLibrary.simpleMessage("تسجيل المستشفى"),
         "Info": MessageLookupByLibrary.simpleMessage("الإشعارات"),
+        "Invalid_Blood_Type":
+            MessageLookupByLibrary.simpleMessage("فصيلة الدم غير صحيحه"),
         "Invalid_secret_number":
             MessageLookupByLibrary.simpleMessage("رقم غير صحيح"),
         "Km": MessageLookupByLibrary.simpleMessage("كم"),
@@ -129,8 +131,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "Loading": MessageLookupByLibrary.simpleMessage("تحميل"),
         "Location_Required":
             MessageLookupByLibrary.simpleMessage("الموقع مطلوب"),
+        "Location_Service_Disabled":
+            MessageLookupByLibrary.simpleMessage("الموقع غير مفعل"),
         "Location_is_required_to_use_app": MessageLookupByLibrary.simpleMessage(
             "الموقع مطلوب لكي تستخدم التطبيق"),
+        "Login_Failed_Email_not_verified": MessageLookupByLibrary.simpleMessage(
+            "خطاء في التسجيل: الايميل لم يفعل"),
+        "Login_Successful":
+            MessageLookupByLibrary.simpleMessage("تم التسجيل بنجاح"),
         "Login_to_dicover_more_services": MessageLookupByLibrary.simpleMessage(
             "تسجيل الدخول لاكتشاف المزيد من الخدمات"),
         "Login_to_discover_more_services": MessageLookupByLibrary.simpleMessage(
@@ -140,6 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "Name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "National_ID": MessageLookupByLibrary.simpleMessage("الرقم القومي"),
         "Next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "No": MessageLookupByLibrary.simpleMessage("لا"),
         "No_image_selected":
             MessageLookupByLibrary.simpleMessage("لم يتم اختيار الصوره"),
         "Notification": MessageLookupByLibrary.simpleMessage("الإشعارات"),
@@ -153,12 +162,25 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أو تسجيل الدخول باستخدام"),
         "Phone_Number": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "Place": MessageLookupByLibrary.simpleMessage("المكان"),
+        "Please_Enter_correct_email":
+            MessageLookupByLibrary.simpleMessage("برجاء, ادخال ايميل صحيح"),
+        "Please_Enter_correct_password":
+            MessageLookupByLibrary.simpleMessage("برجاء, ادخال رقم سري صحيح"),
         "Please_Enter_your_email_to_rest_password":
             MessageLookupByLibrary.simpleMessage(
                 "من فضلك، أدخل بريدك الإلكتروني لإعادة تعيين كلمة المرور"),
         "Please_enable_location_services_and_app_permissions_to_continue":
             MessageLookupByLibrary.simpleMessage(
                 "يرجى تمكين خدمات الموقع وأذونات التطبيق لمتابعة"),
+        "Please_enable_the_location_service_to_perform_the_search":
+            MessageLookupByLibrary.simpleMessage(
+                "برجاء تفعيل الموقع لكي تتمكن من البحث"),
+        "Please_select_your_Age":
+            MessageLookupByLibrary.simpleMessage("برجاء ادخال عمرك"),
+        "Please_select_your_BMI": MessageLookupByLibrary.simpleMessage(
+            "الرجاء تحديد مؤشر كتلة الجسم الخاص بك"),
+        "Please_select_your_blood_type":
+            MessageLookupByLibrary.simpleMessage("برجاء اختيار فصيلة الدم"),
         "Please_verify_your_email_to_continue_registration":
             MessageLookupByLibrary.simpleMessage(
                 "يرجى التحقق من بريدك الإلكتروني لمتابعة التسجيل"),
@@ -184,18 +206,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "Something_went_wrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "Sorry": MessageLookupByLibrary.simpleMessage("ناسف"),
+        "Sorry_this_email_not_found_try_again":
+            MessageLookupByLibrary.simpleMessage(
+                "عفوا, الايميل غير موجود برجاء المحاوله مرخه اخري"),
+        "The_blood_type_you_entered_is_not_valid":
+            MessageLookupByLibrary.simpleMessage(
+                "فصيلة الدم التي ادخلتها غير صحيحه"),
         "The_data_will_be_completely_erased_from_the_application":
             MessageLookupByLibrary.simpleMessage(
                 "تم مسح البانات بالكامل من الابليكيشن"),
         "The_notifications_will_be_completely_deleted":
             MessageLookupByLibrary.simpleMessage(
                 "تم حذف جميع الاشعارات بالكامل"),
+        "This_email_is_not_vaild":
+            MessageLookupByLibrary.simpleMessage("الايميل غير صحيح"),
         "User_Name": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "Verify_your_email":
             MessageLookupByLibrary.simpleMessage("تحقق من بريدك الإلكتروني"),
         "Warning": MessageLookupByLibrary.simpleMessage("تحذير"),
         "Welcome_to_BLD":
             MessageLookupByLibrary.simpleMessage("مرحبًا بك في BLD"),
+        "Yes": MessageLookupByLibrary.simpleMessage("نعم"),
         "You_dont_have_an_account":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "add_more_data":
@@ -222,6 +253,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "open_location_settings":
             MessageLookupByLibrary.simpleMessage("افتح إعدادات الموقع"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "password_is_too_weak":
+            MessageLookupByLibrary.simpleMessage("الرقم السري ضعيف"),
         "permission": MessageLookupByLibrary.simpleMessage("الإذن"),
         "please_scan_a_correct_Qr":
             MessageLookupByLibrary.simpleMessage("يرجى مسح الباركود الصحيح"),

@@ -258,7 +258,8 @@ class _AddBloodTypeState extends State<AddBloodType> {
 
       if (bloodTypeDoc.exists) {
         // Document already exists, show error dialog
-        showErrorDialog('Failure', 'Blood type already exists');
+        showErrorDialog(
+            S.of(context).Failure, S.of(context).Blood_type_already_exists);
         return;
       }
 
@@ -313,10 +314,12 @@ class _AddBloodTypeState extends State<AddBloodType> {
       }, SetOptions(merge: true));
 
       // Show success dialog
-      showSuccessDialog('Successful', 'Blood type is added');
+      showSuccessDialog(
+          S.of(context).successfull, S.of(context).Blood_type_is_added);
     } catch (error) {
       // Handle errors
-      showErrorDialog('Error', 'Please scan a correct QR');
+      showErrorDialog(
+          S.of(context).Error, S.of(context).please_scan_a_correct_Qr);
       print('Error adding data: $error');
     }
   }

@@ -109,7 +109,7 @@ class MyWidget extends StatelessWidget {
                                 child: TextField(
                                   decoration: InputDecoration(
                                       border: InputBorder.none,
-                                      hintText: "Email or Phone number",
+                                      hintText: S.of(context).Email,
                                       hintStyle:
                                           TextStyle(color: Colors.grey[700])),
                                 ),

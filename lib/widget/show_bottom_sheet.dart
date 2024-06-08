@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:bldapp/generated/l10n.dart';
 import 'package:intl/intl.dart';
 
 void customShowBottomSheet(BuildContext context, String id) {
@@ -59,7 +60,7 @@ void customShowBottomSheet(BuildContext context, String id) {
               onChanged: (p0) {
                 userName = p0;
               },
-              text: 'User Name',
+              text: S.of(context).User_Name,
             ),
             SizedBox(
               height: 15,
@@ -68,14 +69,14 @@ void customShowBottomSheet(BuildContext context, String id) {
               onChanged: (p0) {
                 bloodType = p0;
               },
-              text: 'BloodType',
+              text: S.of(context).Blood_Type,
             ),
             SizedBox(
               height: 15,
             ),
 
             CustomTextFormField(
-              text: 'Place',
+              text: S.of(context).Place,
               onChanged: (p0) {
                 place = p0;
               },
@@ -84,7 +85,7 @@ void customShowBottomSheet(BuildContext context, String id) {
               height: 15,
             ),
             CustomTextFormField(
-              text: 'Phone Number',
+              text: S.of(context).Phone_Number,
               onChanged: (p0) {
                 phoneNumber = p0;
               },
@@ -112,7 +113,7 @@ void customShowBottomSheet(BuildContext context, String id) {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Text('Send Notification'),
+              child: Text(S.of(context).Send_Notification),
               color: kPrimary,
             ),
             SizedBox(

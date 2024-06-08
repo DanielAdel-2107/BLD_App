@@ -96,7 +96,6 @@ class NotificationHelper {
 
   getRequest() async {
     FirebaseMessaging messaging = FirebaseMessaging.instance;
-
     NotificationSettings settings = await messaging.requestPermission(
       alert: true,
       announcement: false,
@@ -106,7 +105,6 @@ class NotificationHelper {
       provisional: false,
       sound: true,
     );
-
     if (settings.authorizationStatus == AuthorizationStatus.authorized) {
       print('User granted permission');
     } else if (settings.authorizationStatus ==

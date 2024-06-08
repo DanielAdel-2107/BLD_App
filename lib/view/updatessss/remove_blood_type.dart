@@ -1,3 +1,5 @@
+// ignore_for_file: body_might_complete_normally_catch_error
+
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:awesome_icons/awesome_icons.dart';
 import 'package:bldapp/model/donar_model.dart';
@@ -5,6 +7,7 @@ import 'package:bldapp/view/updatessss/donar_details_info.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:bldapp/generated/l10n.dart';
 
 class RemoveQrCode extends StatefulWidget {
   const RemoveQrCode({Key? key}) : super(key: key);
@@ -18,7 +21,7 @@ class _RemoveQrCodeState extends State<RemoveQrCode> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Remove Blood Type'),
+        title: Text(S.of(context).Remove_Blood_Type),
       ),
       backgroundColor: Color(0xff100B20),
       body: Column(
@@ -30,7 +33,7 @@ class _RemoveQrCodeState extends State<RemoveQrCode> {
               controller: searchController,
               onChanged: (query) => searchFunc(query),
               decoration: InputDecoration(
-                hintText: 'Search by Serial Num',
+                hintText: S.of(context).Search_by_Serial_Num,
                 hintStyle: TextStyle(color: Colors.white),
                 border: OutlineInputBorder(),
                 suffixIcon: IconButton(
@@ -48,10 +51,10 @@ class _RemoveQrCodeState extends State<RemoveQrCode> {
           Expanded(
             child: SingleChildScrollView(
               child: DataTable(
-                columns: const <DataColumn>[
+                columns: <DataColumn>[
                   DataColumn(
                     label: Text(
-                      'Blood Type',
+                      S.of(context).Blood_Type,
                       style: TextStyle(
                         fontStyle: FontStyle.italic,
                         color: Colors.amber,
@@ -60,7 +63,7 @@ class _RemoveQrCodeState extends State<RemoveQrCode> {
                   ),
                   DataColumn(
                     label: Text(
-                      'Serial Num',
+                      S.of(context).Serial_Num,
                       style: TextStyle(
                         fontStyle: FontStyle.italic,
                         color: Colors.amber,
@@ -69,7 +72,7 @@ class _RemoveQrCodeState extends State<RemoveQrCode> {
                   ),
                   DataColumn(
                     label: Text(
-                      'Details',
+                      S.of(context).Details,
                       style: TextStyle(
                         fontStyle: FontStyle.italic,
                         color: Colors.amber,
@@ -183,8 +186,8 @@ class _RemoveQrCodeState extends State<RemoveQrCode> {
                 context: context,
                 dialogType: DialogType.info,
                 animType: AnimType.rightSlide,
-                title: 'Removed',
-                desc: 'Removed',
+                title: S.of(context).Remove,
+                desc: S.of(context).Remove,
                 btnCancelOnPress: () {
                   setState(() {});
                 },
@@ -198,8 +201,8 @@ class _RemoveQrCodeState extends State<RemoveQrCode> {
         context: context,
         dialogType: DialogType.info,
         animType: AnimType.rightSlide,
-        title: 'Error',
-        desc: 'Error',
+        title: S.of(context).Error,
+        desc: S.of(context).Error,
         btnCancelOnPress: () {
           setState(() {});
         },

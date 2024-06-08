@@ -8,6 +8,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:bldapp/generated/l10n.dart';
 
 class MyNotificationView extends StatefulWidget {
   const MyNotificationView({super.key});
@@ -78,8 +79,8 @@ class _MyNotificationViewState extends State<MyNotificationView> {
             context: context,
             dialogType: DialogType.question,
             animType: AnimType.rightSlide,
-            title: 'Are you sure to delete all Notification ?',
-            desc: 'The notifications will be completely deleted ',
+            title: S.of(context).Are_you_sure_to_delete_all_Notification,
+            desc: S.of(context).The_notifications_will_be_completely_deleted,
             btnCancelOnPress: () {},
             btnOkOnPress: () {
               deleteItem();
@@ -90,7 +91,7 @@ class _MyNotificationViewState extends State<MyNotificationView> {
             color: _theme.isDarkMode ? Colors.white : background),
       ),
       appBar: AppBar(
-        title: Text('My Notification'),
+        title: Text(S.of(context).My_Notification),
       ),
       body: StreamBuilder<List<QueryDocumentSnapshot>>(
           stream: notification
@@ -103,7 +104,7 @@ class _MyNotificationViewState extends State<MyNotificationView> {
               return Center(child: CircularProgressIndicator());
             } else if (snapshot.hasError) {
               return Center(
-                child: Text('Something went wrong'),
+                child: Text(S.of(context).Something_went_wrong),
               );
             } else {
               List<QueryDocumentSnapshot> dataList = snapshot.data!;

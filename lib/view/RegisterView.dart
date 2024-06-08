@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:path/path.dart';
-
+import 'package:bldapp/generated/l10n.dart';
 import '../Colors.dart';
 import '../Widget/CustomButton.dart';
 import '../Widget/CustomTextFormField.dart';
@@ -122,7 +122,7 @@ class _RegisterViewState extends State<RegisterView> {
               right: 10,
             ),
             content: Text(
-              'password is too weak',
+              S.of(context as BuildContext).password_is_too_weak,
               style: TextStyle(color: background),
             ),
           ),
@@ -597,7 +597,10 @@ class _RegisterViewState extends State<RegisterView> {
                           },
                           child: const Text(
                             'Sign in',
-                            style: TextStyle(fontSize: 18,  color: Colors.amber,),
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.amber,
+                            ),
                           ),
                         ),
                       ],

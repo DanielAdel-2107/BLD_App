@@ -221,12 +221,11 @@ class _SearchViewState extends State<SearchView> {
                               return AlertDialog(
                                 backgroundColor: background,
                                 title: Text(
-                                  S.of(context).Invalid_Blood_Type,
+                                  S.of(context).Invalid_Blood_Type
+                                  ,
                                 ),
                                 content: Text(
-                                  S
-                                      .of(context)
-                                      .The_blood_type_you_entered_is_not_valid,
+                                  S.of(context).The_blood_type_you_entered_is_not_valid,
                                 ),
                                 actions: <Widget>[
                                   MaterialButton(
@@ -367,11 +366,11 @@ class _SearchViewState extends State<SearchView> {
         builder: (context) => AlertDialog(
           backgroundColor: (background),
           title: Text(
-            'Location Service Disabled',
+            S.of(context).Location_Service_Disabled
+            ,
             style: TextStyle(color: Colors.white),
           ),
-          content: Text(
-              'Please enable the location service to perform the search.',
+          content: Text(S.of(context).Please_enable_the_location_service_to_perform_the_search,
               style: TextStyle(color: Colors.amber)),
           actions: [
             MaterialButton(
@@ -379,7 +378,7 @@ class _SearchViewState extends State<SearchView> {
               child: Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                child: Text('OK', style: TextStyle(color: background)),
+                child: Text(S.of(context).ok , style: TextStyle(color: background)),
               ),
               onPressed: () => Navigator.pop(context),
             ),
