@@ -47,8 +47,7 @@ class _OCR_ViewState extends State<OCR_View>
           dialogType: DialogType.success,
           animType: AnimType.rightSlide,
           title: S.of(context).Good_analysis,
-          desc: S.of(context).press_Ok_to_complete_your_donation_check +
-              '$hemoglobin',
+          desc: S.of(context).press_Ok_to_complete_your_donation_check,
           btnCancelOnPress: () {
             Navigator.pop(context);
           },
